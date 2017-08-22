@@ -34,7 +34,7 @@ public class mainService {
         double count = mi.getCount();//使用的总金额
         double balance = mi.getBalance();//剩余金额
         String type = acctItem.getType();
-        double newCount = 0;
+        double newCount = 0;//初始为0
         double newBalance = 0;
         if (type.equals("1")) {//支出
             newCount = count + acctItem.getAcctMoney();
