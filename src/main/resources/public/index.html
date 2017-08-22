@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="account">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            color: #5cb85c;
+            padding: 10px 0;
+            position: relative;
+            width: 905px;
+            margin: 50px auto;
+        }
+
+        header p {
+            color: gray;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        section {
+            width: 905px;
+            height: 650px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .add {
+            position: absolute;
+            right: 0px;
+            top: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .list {
+            border: 1px solid #ddd;
+            box-shadow: 1px 1px 5px #d1d1d1;
+            -webkit-box-shadow: 1px 1px 5px #d1d1d1;
+            background: #fff;
+            position: absolute;
+            right: -15px;
+            top: 60px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+            color: #333;
+        }
+
+        .list a {
+            color: #333;
+        }
+
+        .list li {
+            padding: 4px 16px;
+        }
+
+        .list li:hover {
+            background: #D1D1D1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body ng-controller="accCtr as acc">
+<header>
+    <h3>记账系统</h3>
+    <p>7栋四单元304</p>
+    <button class="add">
+        <img src="img/307-list (1).png"/>
+    </button>
+    <ul class="list">
+        <li><a href="#list">主页</a></li>
+        <li><a href="#add">新增</a></li>
+        <li>登出</li>
+        <li>关于</li>
+    </ul>
+</header>
+<section ng-view="">
+
+</section>
+<footer></footer>
+</body>
+<script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.2.9/angular-route.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.min.js"></script>
+<script src="plugin/laydate-v1.1/laydate/laydate.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $('body').click(function () {
+        $('.list').hide();
+    })
+    $('.add').click(function () {
+        $('.list').show();
+        return false;
+    })
+</script>
+</html>

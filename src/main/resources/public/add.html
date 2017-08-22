@@ -1,0 +1,25 @@
+<h4>新增一条记录</h4>
+<hr/>
+<div class="form-group">
+    <label for="">事件类型：</label>
+    <select class="form-control" ng-model="acc.type">
+        <option value="1">支出</option>
+        <option value="0">收入</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="">啥子时候：</label>
+    <input type="text" class="form-control" id="date" ng-click="acc.getTime();"/>
+</div>
+<div class="form-group">
+    <label for="">好多钱（元）：</label>
+    <input type="text" class="form-control" ng-model="acc.acctMoney"/>
+</div>
+<div class="form-group">
+    <label for="">具体莫子事：</label>
+    <textarea class="form-control" style="height:150px;" ng-model="acc.desc">
+		
+	</textarea>
+</div>
+
+<button class="btn btn-success" style="clear: both;float: right;" ng-click="acc.postData();">确定</button>

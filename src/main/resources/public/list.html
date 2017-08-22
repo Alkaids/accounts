@@ -1,0 +1,28 @@
+<fieldset>
+        <legend>剩余金额：{{balance}} 元， 总共使用：{{count}} 元</legend>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>金额</th>
+                <th>类型</th>
+                <th>描述</th>
+                <th>日期</th>
+                <th>操作人</th>
+            </tr>
+            </thead>
+            <tbody id="acctTable">
+            <tr ng-show="acctItems.length <= 0">
+                <td colspan="5" style="text-align: center;">还没有数据</td>
+            </tr>
+            <tr ng-repeat="item in acctItems">
+                <td>{{ item.acctMoney }}</td>
+                <td>{{ item.type=="0"?"收入":"支出" }}</td>
+                <td>{{ item.acctDesc }}</td>
+                <td>{{ item.dealDate }}</td>
+                <td>{{ item.userName }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+</fieldset>
