@@ -1,4 +1,4 @@
-package com.gravel.service;
+package com.gravel.dao;
 
 import com.gravel.bean.acctItem;
 import com.gravel.bean.moneyinfo;

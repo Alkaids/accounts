@@ -1,8 +1,8 @@
-package com.gravel.dao;
+package com.gravel.service;
 
 import com.gravel.bean.acctItem;
 import com.gravel.bean.moneyinfo;
-import com.gravel.service.acctItemMapper;
+import com.gravel.dao.acctItemMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

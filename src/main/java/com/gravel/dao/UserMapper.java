@@ -1,4 +1,4 @@
-package com.gravel.service;
+package com.gravel.dao;
 
 import com.gravel.bean.User;
 import org.apache.ibatis.annotations.Insert;
