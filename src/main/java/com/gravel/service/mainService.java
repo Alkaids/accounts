@@ -24,6 +24,10 @@ public class mainService {
 
     }
 
+    /**
+     * 获取账目详情的list
+     * @return
+     */
     public List<acctItem> getAcctItemLsit() {
         List<acctItem> acctItems = acctItemMapper.getAcctItemList();
         return acctItems;
